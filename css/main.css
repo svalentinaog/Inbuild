@@ -1,0 +1,32 @@
+@import url("header.css");
+@import url("footer.css");
+@import url("first-section.css");
+@import url("second-section.css");
+@import url("sixth-section.css");
+@import url("seventh-section.css");
+@import url("scroll-top.css");
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Open sans", sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 150px;
+    gap: 40px;
+}
+
+:root {
+    --color-navy-blue: #30A1B4;
+    --color-light-grey: #E9E9E9;
+    --color-grey: #545454;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --bg2-footer: #111111;
+    --bg1-footer: #181818;
+    --color-footer: #C0C0C0;
+}

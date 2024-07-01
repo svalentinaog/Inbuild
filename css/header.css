@@ -1,0 +1,144 @@
+header {
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; */
+    width: 100%;
+    transition: 0.3s ease;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 150px;
+    background-color: var(--color-white);
+}
+
+/* logo */
+.header-wrapper img {
+    width: 130px;
+    height: auto;
+}
+
+/* contenido */
+.header-content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* menu de navegacion */
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: var(--color-grey);
+}
+
+nav ul li a:hover {
+    color: var(--color-navy-blue);
+}
+
+nav ul .active {
+    color: var(--color-navy-blue);
+}
+
+nav ul li span {
+    margin-left: 10px;
+}
+
+/* Buscador */
+.search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.3s ease;
+    position: relative;
+    width: auto;
+}
+
+.search-icon {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-icon img {
+    width: 100%;
+    height: auto;
+}
+
+.search-form input[type="text"] {
+    visibility: hidden;
+    opacity: 0;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 0;
+    transition: width 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.search-form input[type="text"].active {
+    visibility: visible;
+    opacity: 1;
+    width: 150px;
+}
+
+/* boton */
+.buy-now {
+    margin-left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 3px;
+    color: var(--color-white);
+    background: linear-gradient(to right, #76787A, #339EB0);
+}
+
+/* Menú responsive */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
