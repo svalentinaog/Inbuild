@@ -17,21 +17,29 @@
                 <div>
                     <button class="menu-toggle" aria-label="Toggle menu">☰</button>
                     <ul class="menu nav-menu">
-                        <li><a href="#" class="active">Home</a><span class="active">˅</span></li>
-                        <li><a href="#">Pages</a><span>˅</span></li>
-                        <li><a href="#">Blogs</a><span>˅</span></li>
-                        <li><a href="#">Portfolio</a><span>˅</span></li>
-                        <li><a href="#">Element</a><span>˅</span></li>
-                        <li><a href="#">Demo</a><span>˅</span></li>
+                        <li class="header-toggle visibility">
+                            <img src="./assets/images/logo.png" alt="Logo">
+                            <button>X</button>
+                        </li>
+                        <li><span><a href="#" class="active">Home</a><span class="active">˅</span></span></li>
+                        <li><span><a href="#">Pages</a><span>˅</span></span></li>
+                        <li><span><a href="#">Blogs</a><span>˅</span></span></li>
+                        <li><span><a href="#">Portfolio</a><span>˅</span></span></li>
+                        <li><span><a href="#">Element</a><span>˅</span></span></li>
+                        <li><span><a href="#">Demo</a><span>˅</span></span></li>
+                        <li>
+                            <form class="search-form collapsed" id="search-form">
+                                <input type="text" placeholder="SEARCH..." id="search-input">
+                                <button type="button" class="search-icon" id="search-icon">
+                                    <img src="./assets/icons/lupa.png" alt="search">
+                                </button>
+                            </form>
+                        </li>
+                        <li>
+                            <button class="buy-now">Buy Now!</button>
+                        </li>
                     </ul>
                 </div>
-                <form class="search-form collapsed" id="search-form">
-                    <input type="text" placeholder="SEARCH..." id="search-input">
-                    <button type="button" class="search-icon" id="search-icon">
-                        <img src="./assets/icons/lupa.png" alt="search">
-                    </button>
-                </form>
-                <button class="buy-now">Buy Now!</button>
             </div>
         </nav>
     </header>
@@ -55,16 +63,16 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing will be distracted by the readable content of
                         a
                         page when looking at its layout it has a normal letters...</p>
-                    <button>Read More</button>
+                    <button class="button-effect">Read More</button>
                 </div>
             </section>
             <section class="second-children">
                 <div>
-                    <h1>Innovative solutions from great experts</h1>
+                    <h1>Innovative solutions <br> from great experts</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing will be distracted by the readable content of
                         a
                         page when looking at its layout it has a normal letters...</p>
-                    <button>Read More</button>
+                    <button class="button-effect">Read More</button>
                 </div>
                 <div class="image-wrapper">
                     <img src="./assets/images/services-and-solutions/2.jpeg" alt="">

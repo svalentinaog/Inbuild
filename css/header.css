@@ -1,8 +1,4 @@
 header {
-    /* position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000; */
     width: 100%;
     transition: 0.3s ease;
 }
@@ -15,29 +11,29 @@ header {
     background-color: var(--color-white);
 }
 
-/* logo */
 .header-wrapper img {
     width: 130px;
     height: auto;
 }
 
-/* contenido */
 .header-content {
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-/* menu de navegacion */
 nav ul {
     display: flex;
-    list-style-type: none;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
 nav ul li {
     margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul li a {
@@ -45,13 +41,11 @@ nav ul li a {
     text-transform: uppercase;
     font-weight: bolder;
     color: var(--color-grey);
+    transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: var(--color-navy-blue);
-}
-
-nav ul .active {
+nav ul li a:hover,
+nav ul .active a {
     color: var(--color-navy-blue);
 }
 
@@ -59,20 +53,18 @@ nav ul li span {
     margin-left: 10px;
 }
 
-/* Buscador */
 .search-form {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: width 0.3s ease;
     position: relative;
-    width: auto;
+    transition: width 0.3s ease;
 }
 
 .search-icon {
     width: 30px;
     height: 30px;
-    background-color: transparent;
+    background: transparent;
     border: none;
     cursor: pointer;
     display: flex;
@@ -101,7 +93,6 @@ nav ul li span {
     width: 150px;
 }
 
-/* boton */
 .buy-now {
     margin-left: 10px;
     font-size: 20px;
@@ -113,7 +104,6 @@ nav ul li span {
     background: linear-gradient(to right, #76787A, #339EB0);
 }
 
-/* Menú responsive */
 .menu-toggle {
     display: none;
     background: none;
@@ -123,22 +113,82 @@ nav ul li span {
     margin-left: auto;
 }
 
+.visibility {
+    display: none;
+}
+
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        display: none;
-        width: 100%;
+    .header-wrapper {
+        padding: 20px;
     }
 
-    nav ul.show {
+    .visibility {
+        display: block;
+    }
+
+    .header-toggle {
+        width: 50%;
         display: flex;
-    }
-
-    nav ul li {
-        margin: 10px 0;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .menu-toggle {
         display: block;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 20px;
+        color: white;
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        z-index: 2;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        margin: 10px 0;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    nav ul li a {
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    .search-form {
+        flex-direction: row-reverse;
+    }
+
+    .search-form input[type="text"] {
+        order: 1;
+    }
+
+    .search-form .search-icon {
+        order: 2;
+    }
+
+    .buy-now {
+        margin: 0;
     }
 }

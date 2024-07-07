@@ -6,8 +6,21 @@
 @import url("seventh-section.css");
 @import url("scroll-top.css");
 
+:root {
+    --color-navy-blue: #30A1B4;
+    --color-light-grey: #E9E9E9;
+    --color-grey: #545454;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --bg2-footer: #111111;
+    --bg1-footer: #181818;
+    --color-footer: #C0C0C0;
+}
+
 html,
 body {
+    height: 100%;
+    width: 100%;
     padding: 0;
     margin: 0;
     font-family: "Open sans", sans-serif;
@@ -20,13 +33,9 @@ body {
     gap: 40px;
 }
 
-:root {
-    --color-navy-blue: #30A1B4;
-    --color-light-grey: #E9E9E9;
-    --color-grey: #545454;
-    --color-white: #ffffff;
-    --color-black: #000000;
-    --bg2-footer: #111111;
-    --bg1-footer: #181818;
-    --color-footer: #C0C0C0;
+@media (max-width: 768px) {
+    .container {
+        gap: 20px;
+        padding: 20px !important;
+    }
 }

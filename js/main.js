@@ -1,5 +1,4 @@
 // Buscador
-
 const searchForm = document.getElementById('search-form');
 const searchIcon = document.getElementById('search-icon');
 const searchInput = document.getElementById('search-input');
@@ -22,7 +21,6 @@ searchInput.addEventListener('input', () => {
 
 
 // Ir arriba
-
 document.addEventListener('DOMContentLoaded', () => {
     const scrollToTopButton = document.getElementById('scrollToTopButton');
     const handleScroll = () => {
@@ -41,9 +39,12 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollToTopButton.addEventListener('click', scrollToTop);
 });
 
-
 // Menu de navegacion
-
 document.querySelector('.menu-toggle').addEventListener('click', function() {
     document.querySelector('.menu').classList.toggle('show');
+});
+
+// Botón de cierre del menú
+document.querySelector('.header-toggle button').addEventListener('click', function() {
+    document.querySelector('.menu').classList.remove('show');
 });
